@@ -15,6 +15,8 @@
 		EB09AEE71A9BA2300084AD2D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB09AEE51A9BA2300084AD2D /* LaunchScreen.xib */; };
 		EB09AEF31A9BA2310084AD2D /* QuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09AEF21A9BA2310084AD2D /* QuizTests.m */; };
 		EB09AEFE1A9BA5300084AD2D /* PerguntaResposta.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09AEFD1A9BA5300084AD2D /* PerguntaResposta.m */; };
+		EB09AF031A9BCAC50084AD2D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09AF021A9BCAC50084AD2D /* SecondViewController.m */; };
+		EB09AF061A9BCC4D0084AD2D /* SeiLa.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09AF051A9BCC4D0084AD2D /* SeiLa.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		EB09AEF21A9BA2310084AD2D /* QuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizTests.m; sourceTree = "<group>"; };
 		EB09AEFC1A9BA5300084AD2D /* PerguntaResposta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerguntaResposta.h; sourceTree = "<group>"; };
 		EB09AEFD1A9BA5300084AD2D /* PerguntaResposta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerguntaResposta.m; sourceTree = "<group>"; };
+		EB09AF011A9BCAC50084AD2D /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		EB09AF021A9BCAC50084AD2D /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		EB09AF041A9BCC4D0084AD2D /* SeiLa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeiLa.h; sourceTree = "<group>"; };
+		EB09AF051A9BCC4D0084AD2D /* SeiLa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeiLa.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 				EB09AED61A9BA2300084AD2D /* Supporting Files */,
 				EB09AEFC1A9BA5300084AD2D /* PerguntaResposta.h */,
 				EB09AEFD1A9BA5300084AD2D /* PerguntaResposta.m */,
+				EB09AF011A9BCAC50084AD2D /* SecondViewController.h */,
+				EB09AF021A9BCAC50084AD2D /* SecondViewController.m */,
+				EB09AF041A9BCC4D0084AD2D /* SeiLa.h */,
+				EB09AF051A9BCC4D0084AD2D /* SeiLa.m */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -224,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB09AF061A9BCC4D0084AD2D /* SeiLa.m in Sources */,
+				EB09AF031A9BCAC50084AD2D /* SecondViewController.m in Sources */,
 				EB09AEFE1A9BA5300084AD2D /* PerguntaResposta.m in Sources */,
 				EB09AEDF1A9BA2300084AD2D /* ViewController.m in Sources */,
 				EB09AEDC1A9BA2300084AD2D /* AppDelegate.m in Sources */,

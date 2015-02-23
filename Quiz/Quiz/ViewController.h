@@ -7,26 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PerguntaResposta.h";
+#import "SeiLa.h"
 @interface ViewController : UIViewController
-{
-    int index;
-    NSMutableArray *array;
-}
+
+@property SeiLa *sl;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelPergunta;
 
-@property (weak, nonatomic) IBOutlet UILabel *labelResposta;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnPergunta;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnResposta;
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
-
-- (IBAction)btnMostrarPergunta:(id)sender;
-
-- (IBAction)btnMostrarResposta:(id)sender;
 
 @end
 

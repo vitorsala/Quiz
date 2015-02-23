@@ -4,6 +4,59 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="QfU-dL-eJC">
+            <objects>
+                <viewController id="YjP-NI-VKG" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PZk-1b-wtd"/>
+                        <viewControllerLayoutGuide type="bottom" id="y0O-KM-DEf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dYv-i8-LrY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-MB-HdN">
+                                <rect key="frame" x="286" y="113" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKV-vP-61q">
+                                <rect key="frame" x="241" y="496" width="123" height="30"/>
+                                <state key="normal" title="Próxima Pergunta"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LcC-TO-XPv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-0W-GzT">
+                                <rect key="frame" x="180" y="277" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="AVQ-uk-p88"/>
+                                    <constraint firstAttribute="height" constant="128" id="GuP-c4-AOM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eAc-MB-HdN" firstAttribute="top" secondItem="PZk-1b-wtd" secondAttribute="bottom" constant="93" id="0g5-rM-XDp"/>
+                            <constraint firstItem="Rbs-0W-GzT" firstAttribute="top" secondItem="eAc-MB-HdN" secondAttribute="bottom" constant="143" id="D6G-ZE-o4Q"/>
+                            <constraint firstAttribute="centerX" secondItem="Rbs-0W-GzT" secondAttribute="centerX" id="IH2-cz-oKj"/>
+                            <constraint firstItem="HKV-vP-61q" firstAttribute="top" secondItem="Rbs-0W-GzT" secondAttribute="bottom" constant="91" id="UEx-43-9L3"/>
+                            <constraint firstAttribute="centerX" secondItem="HKV-vP-61q" secondAttribute="centerX" constant="-2.5" id="tIZ-aw-Qzi"/>
+                            <constraint firstAttribute="centerX" secondItem="eAc-MB-HdN" secondAttribute="centerX" constant="-0.5" id="xiS-Zh-agX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPergunta" destination="HKV-vP-61q" id="rmg-r1-wOI"/>
+                        <outlet property="imgView" destination="Rbs-0W-GzT" id="TMJ-2p-PwY"/>
+                        <outlet property="labelResposta" destination="eAc-MB-HdN" id="tFq-x8-BOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DM-GJ-2b3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="742"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -16,30 +69,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKV-vP-61q">
-                                <rect key="frame" x="241" y="112" width="119" height="30"/>
-                                <state key="normal" title="Mostrar Pergunta"/>
-                                <connections>
-                                    <action selector="btnMostrarPergunta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ng3-h6-u0z"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-MB-HdN">
-                                <rect key="frame" x="286" y="183" width="29" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-qL-wWa">
-                                <rect key="frame" x="239" y="243" width="123" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-qL-wWa">
+                                <rect key="frame" x="239" y="440" width="123" height="30"/>
                                 <state key="normal" title="Mostrar Resposta">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnMostrarResposta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZV-jB-fXH"/>
+                                    <segue destination="YjP-NI-VKG" kind="show" id="8P8-XB-Gn0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-1R-4Dh">
-                                <rect key="frame" x="171" y="13" width="258" height="91"/>
+                                <rect key="frame" x="171" y="122" width="258" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="PHp-1u-iKR"/>
                                     <constraint firstAttribute="height" constant="91" id="cOT-p7-ibS"/>
@@ -48,27 +88,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-0W-GzT">
-                                <rect key="frame" x="180" y="356" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="AVQ-uk-p88"/>
-                                    <constraint firstAttribute="height" constant="128" id="GuP-c4-AOM"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eAc-MB-HdN" firstAttribute="top" secondItem="HKV-vP-61q" secondAttribute="bottom" constant="41" id="0Eq-if-LSq"/>
-                            <constraint firstItem="HKV-vP-61q" firstAttribute="centerX" secondItem="hW2-1R-4Dh" secondAttribute="centerX" constant="0.5" id="3Ut-YY-X2K"/>
-                            <constraint firstAttribute="centerX" secondItem="HKV-vP-61q" secondAttribute="centerX" constant="-0.5" id="AkU-WU-OsJ"/>
-                            <constraint firstItem="HKV-vP-61q" firstAttribute="top" secondItem="hW2-1R-4Dh" secondAttribute="bottom" constant="8" id="Hq1-qr-JQO"/>
-                            <constraint firstAttribute="centerX" secondItem="eAc-MB-HdN" secondAttribute="centerX" constant="-0.5" id="JGI-M4-w3L"/>
                             <constraint firstAttribute="centerX" secondItem="R8q-qL-wWa" secondAttribute="centerX" constant="-0.5" id="ZrS-8t-aRo"/>
-                            <constraint firstItem="R8q-qL-wWa" firstAttribute="top" secondItem="eAc-MB-HdN" secondAttribute="bottom" constant="39" id="bgi-VN-7xc"/>
                             <constraint firstAttribute="centerX" secondItem="hW2-1R-4Dh" secondAttribute="centerX" id="bh4-oQ-1kz"/>
-                            <constraint firstAttribute="centerX" secondItem="Rbs-0W-GzT" secondAttribute="centerX" id="hzk-gB-fOs"/>
-                            <constraint firstItem="hW2-1R-4Dh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-7" id="rUG-2c-c95"/>
-                            <constraint firstItem="Rbs-0W-GzT" firstAttribute="top" secondItem="R8q-qL-wWa" secondAttribute="bottom" constant="83" id="wZh-Sf-pug"/>
+                            <constraint firstItem="hW2-1R-4Dh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="rUG-2c-c95"/>
                         </constraints>
                     </view>
                     <connections>
@@ -81,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="645"/>
+            <point key="canvasLocation" x="894" y="511"/>
         </scene>
     </scenes>
 </document>
