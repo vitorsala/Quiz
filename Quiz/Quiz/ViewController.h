@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PerguntaResposta.h";
 @interface ViewController : UIViewController
+{
+    int index;
+    NSMutableArray *array;
+}
 
+@property (weak, nonatomic) IBOutlet UILabel *labelPergunta;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelResposta;
+
+- (IBAction)btnMostrarPergunta:(id)sender;
+
+- (IBAction)btnMostrarResposta:(id)sender;
 
 @end
 
