@@ -18,6 +18,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelResposta;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnPergunta;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnResposta;
+
 - (IBAction)btnMostrarPergunta:(id)sender;
 
 - (IBAction)btnMostrarResposta:(id)sender;

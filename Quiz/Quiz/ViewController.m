@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+    self.view.backgroundColor = [[UIColor alloc] initWithRed:0.6 green:0.6 blue:0.6 alpha:1];
+
+
     array = [[NSMutableArray alloc] init];
     index = 2;
 
@@ -24,7 +29,14 @@
     [array addObject:[[PerguntaResposta alloc] initWithPergunta:@"Quanto é 1 + 1?" AndResposta:@"2"] ];
 
     _labelPergunta.text = @"";
+    _labelPergunta.textColor = [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha:1];
     _labelResposta.text = @"???";
+    _labelResposta.textColor = [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha:1];
+
+    _btnPergunta.backgroundColor = [[UIColor alloc] initWithRed:0.8 green:0.8 blue:0.8 alpha:1];
+    _btnPergunta.tintColor = [UIColor redColor];
+    _btnResposta.backgroundColor = [[UIColor alloc] initWithRed:0.8 green:0.8 blue:0.8 alpha:1];
+    _btnResposta.tintColor = [UIColor redColor];
 
 }
 

@@ -18,9 +18,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKV-vP-61q">
                                 <rect key="frame" x="231" y="119" width="119" height="30"/>
-                                <state key="normal" title="Mostrar Pergunta">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Mostrar Pergunta"/>
                                 <connections>
                                     <action selector="btnMostrarPergunta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ng3-h6-u0z"/>
                                 </connections>
@@ -65,6 +63,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnPergunta" destination="HKV-vP-61q" id="qH2-q2-fJ4"/>
+                        <outlet property="btnResposta" destination="R8q-qL-wWa" id="jPG-9E-OuP"/>
                         <outlet property="labelPergunta" destination="hW2-1R-4Dh" id="pLF-Fb-buB"/>
                         <outlet property="labelResposta" destination="eAc-MB-HdN" id="xfC-oB-3XM"/>
                     </connections>
