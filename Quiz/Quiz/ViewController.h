@@ -22,6 +22,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnResposta;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+
 - (IBAction)btnMostrarPergunta:(id)sender;
 
 - (IBAction)btnMostrarResposta:(id)sender;

@@ -22,11 +22,11 @@
 
 
     array = [[NSMutableArray alloc] init];
-    index = 2;
+    index = -1;
 
-    [array addObject:[[PerguntaResposta alloc] initWithPergunta:@"Qual é a resposta para a vida, o universo e todo mais?" AndResposta:@"42"] ];
-    [array addObject:[[PerguntaResposta alloc] initWithPergunta:@"Quem sou eu??" AndResposta:@"Eu sou o KAWAI!!!!"] ];
-    [array addObject:[[PerguntaResposta alloc] initWithPergunta:@"Quanto é 1 + 1?" AndResposta:@"2"] ];
+    [array addObject:[[PerguntaResposta alloc] initWithPergunta:@"Qual é a resposta para a vida, o universo e todo mais?" Resposta:@"42" AndImage:@"42.png"]];
+    [array addObject:[[PerguntaResposta alloc] initWithPergunta:@"Qual o país em que existiu os samurais?" Resposta:@"Japão" AndImage:@"japan.PNG"] ];
+    [array addObject:[[PerguntaResposta alloc] initWithPergunta:@"Quanto é 1 + 1?" Resposta:@"2" AndImage:@"2.png"] ];
 
     _labelPergunta.text = @"";
     _labelPergunta.textColor = [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha:1];
@@ -49,11 +49,15 @@
     index = (index+1)%3;
     _labelPergunta.text = [(PerguntaResposta *)[array objectAtIndex:index] pergunta];
     _labelResposta.text = @"???";
+    _imgView.image = nil;
+
 }
 
 - (IBAction)btnMostrarResposta:(id)sender {
-    _labelResposta.text = [(PerguntaResposta *)[array objectAtIndex:index] resposta];
-
+    if(index >= 0){
+        _labelResposta.text = [(PerguntaResposta *)[array objectAtIndex:index] resposta];
+        _imgView.image = [UIImage imageNamed:[(PerguntaResposta *)[array objectAtIndex:index] img]];
+    }
 }
 
 @end
